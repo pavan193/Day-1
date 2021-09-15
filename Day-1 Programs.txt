@@ -1,0 +1,83 @@
+Begin 
+	READ Inputs P,N,R
+	CALCULATE SI= P*N*R/100
+	PRINT SI
+close
+
+
+Begin
+
+	PROMPT "Enter a value" and store it in num
+	if(num % 2 == 0 && num % 3 == 0 && num % 5 == 0)
+             Display"The number is divisible"
+	Else
+             Display"The number is not Divisible"
+	ENDIF
+	
+End
+
+BEGIN
+	PROMPT "Enter a number" and store in age
+	if(age<18)
+	DISPLAY "not eligible too young"
+	elseif(age>60)
+	DISPLAY "not eligible Senior Citizen"
+	else(age>=18 && age<=60)
+	DISPLAY "eligible to vote"
+	ENDIF
+END
+
+BEGIN
+	INITIALIZE num to 1
+	WHILE(num<=5)
+	DISPLAY "num"
+	num=num+1
+	END WHILE
+END
+
+BEGIN 
+	DECLARE num as integer
+	for num=1 to 10
+		if (num%2=0)
+			DISPLAY "even"
+		else
+			DISPLAY "odd"
+		ENDIF
+	END FOR
+END
+
+BEGIN
+	DECLARE numbers[4] as INTEGER ARRAY
+	DECLARE num as INTEGER
+	INITIALIZE num to 0
+	FOR index=0 to 4
+		ACCEPT numbers[index]
+	END FOR
+
+	FOR index=0 to 4
+		IF((numbers[index]%1==0)&&(numbers[index]%numbers[index]==0)) THEN
+			DISPLAY "PRIME"
+		END IF
+	END FOR
+END
+
+Begin
+    Declare numbers[5] as integerarrays
+    Declare i,n as integer
+    Declare num as integer
+        for i =0 to 4
+            ACCEPT numbers[i]
+        for i = 0 to 4
+            num =0
+        for n= 2 to i
+            if(numbers[i]%n==0)
+                num = num+1
+            end if
+        end for
+        if(num == 0)
+            display numbers[i] is prime
+        else
+            display numbers[i] is not prime
+        end if
+        end for
+end
